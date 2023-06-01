@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+a.active{
+  color: green;
+}
+/* Header start */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .logo {
+  margin-top: 5px;
+}
+header .logo img {
+  width: 100px;
+  cursor: pointer;
+}
+header ul {
+  display: flex;
+  margin-top: 15px;
+}
+header ul li {
+  margin: 0 8px;
+}
+header a {
+  font-size: 14px;
+}
+header .button i {
+  font-size: 25px;
+  position: absolute;
+  right: -100%;
+  cursor: pointer;
+}
+header .randevu a {
+  position: absolute;
+  top: 2.3rem;
+  right: 1.5rem;
+}
+header ul li a:hover{
+text-decoration: underline;
+}
+.SMN_effect-9 li{
+  margin-top: 20px;
+}
+.SMN_effect-9 a{
+  font-size: 15px;
+  font-weight: bold;
+}
+.SMN_effect-9 a {
+	line-height: 3em;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	perspective: 800px;
+  color: #000;
+}
+.SMN_effect-9 a span {
+	position: relative;
+	display: inline-block;
+	padding: 3px 20px 0;
+	background:#fff;
+	box-shadow: inset 0 3px #fff;
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
+	transition: background 0.6s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 50%;
+	-moz-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+}
+.SMN_effect-9 a span:before {
+	position: absolute;
+	top: 0;left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	content: attr(data-hover);
+	-webkit-transform: rotateX(270deg);
+	-moz-transform: rotateX(270deg);
+	transform: rotateX(270deg);
+	-webkit-transition: -webkit-transform 0.6s;
+	-moz-transition: -moz-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+	pointer-events: none;
+}
+.SMN_effect-9 a:hover span, .SMN_effect-9 a:focus span {
+	background: green;
+}
+.SMN_effect-9 a.active{
+  color: green;
+}
+.SMN_effect-9 a:hover span:before, .SMN_effect-9 a:focus span:before {
+  color: green;
+	-webkit-transform: rotateX(10deg);
+	-moz-transform: rotateX(10deg);
+	transform: rotateX(10deg);
+}
+/* Header end */
+/* Footer start */
+#footer-menu a {
+  text-decoration: none;
+  margin: 30px 0;
+  color: #fff;
+  transition: 0.7s;
+  font-size: 20px;
+}
+#footer-menu a:hover {
+  color: gray;
+}
+#social-media a {
+  font-size: 30px;
+  color: #fff;
+  transition: 0.7s;
+}
+#social-media a:hover {
+  color: gray;
+}
+#social-media li{
+    margin: 0 10px;
+}
+#social-media ul{
+    margin: auto;
+}
+/* Footer end */
+/* Footer author start */
+#author a{
+  text-decoration: none;
+  color: gray;
+  transition: 0.7s;
+}
+#author a:hover{
+  padding: 5px;
+  color: #000;
+ background-color: #fff;
+}
+/* Footer author end */
+/* Header Ofcanvas Menu for mobile start  */
+#ofcanvasId a{
+  text-decoration: none;
+  color: gray;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+/* Header Ofcanvas Menu for mobile end  */
+/* Tibbi sobeler image hover start */
+#sobeler img{
+  transition: 0.7s;
+}
+
+@keyframes rotate{
+  0%{
+      transform: rotate(0deg);
+  }
+  50%{
+      transform: rotate(180deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+
+
+
+#sobeler img:hover {
+	transform: rotate(360deg);
+  border: 5px solid green;
+}
+/* Tibbi sobeler image hover end */
+/* Media Queries start */
+@media screen and (max-width: 1200px) {
+  header ul li {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 999px) {
+  header ul {
+    display: none;
+  }
+  header .button.active i {
+    right: 1rem;
+    top: 1.3rem;
+  }
+}
+@media screen and (max-width: 999px) and (min-width: 576px) {
+  header .button.active i {
+    top: 2.3rem;
+  }
+  #social-media ul{
+    display: flex;
+    flex-direction: column;
+  }
+  header .randevu a {
+    right: 4rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  header .logo img {
+    width: 60px;
+  }
+  body {
+    font-size: 75%;
+  }
+  header .randevu a {
+    top: 1.1rem;
+    right: 4rem;
+  }
+}
+/* Media Queries end */
